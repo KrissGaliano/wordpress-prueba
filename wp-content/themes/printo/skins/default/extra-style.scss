@@ -1,0 +1,190 @@
+@import "../../css/_mixins.scss";
+@import "../../css/_theme-vars.scss";
+@import "css/_skin-vars.scss";
+
+// bg image
+.page_wrap.with_bg {
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	&.contain_size {
+		background-position: top center;
+		-webkit-background-size: contain;
+		background-size: contain;
+	}
+	.page_content_wrap {
+		background-color: transparent;
+	}
+	.top_panel,
+	[class*="scheme_"].top_panel,
+	[class*="scheme_"].footer_wrap {
+		background-color: transparent;
+	}
+}
+body.with_bg_canvas .page_wrap.with_bg {
+	//background: none;
+}
+
+// custom BG from Layouts Builder
+.extra_bg_layout {
+	.custom_bg_layout_area {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 0;		
+	}
+	.page_content_wrap {
+		background-color: transparent;
+	}
+	.top_panel,
+	[class*="scheme_"].top_panel,
+	[class*="scheme_"].footer_wrap {
+		background-color: transparent;
+	}
+}
+@media #{$media_xxl} {
+	/* Need to avoid horizontal scrollbar and shift page. But with this rule stack sections jump down when any rows become fixed */
+	.body_style_fullscreen:not(.elementor-editor-active) .content_wrap_fullscreen,
+	body:not(.elementor-editor-active) .extra_bg_layout {
+		overflow: hidden;
+		position: relative;
+	}
+}
+
+@media #{$media_not_mobile} {
+	.extra_bg_layout .custom_bg_layout_area .elementor-section.elementor-section-height-full {
+		top: var(--fixed-rows-height);
+	}
+}
+
+
+// 404
+.post_item_404 .post_content .all-svg {
+	display: none;
+}
+
+// Breadcrumbs
+.sc_layouts_title .breadcrumbs {
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 400;
+	text-transform: none;
+	letter-spacing: 0;
+	a {
+		color: var(--theme-color-text) !important;
+	}
+}
+.sc_layouts_title .sc_layouts_title_breadcrumbs {
+	color: var(--theme-color-text);
+}
+.sc_layouts_title_breadcrumbs {
+	margin-top: 1em;
+}
+.breadcrumbs .breadcrumbs_delimiter {
+	margin: 0 0.6em;
+	&:before {
+		content: '-';
+	}
+}
+
+// Cart
+.sc_layouts_row_type_compact .sc_layouts_cart .sc_layouts_cart_icon:before {
+   content: '\EA1C';
+}
+
+// Icons creative
+.sc_icons_creative .sc_icons_item_title {
+	font-size: 24px;
+}
+
+.slider_pagination_style_title.sc_slider_controls_light .slider_pagination_wrap .slider_pagination_bullet {
+	font-weight: 600;
+}
+
+// Custom
+.dis_block .elementor-counter .elementor-counter-number-wrapper {
+	display: block;
+}
+.overflow-hidden {
+	overflow: hidden;
+}
+
+// Search
+.search_style_expand.search_wrap .search_submit:before {
+	color: var(--theme-color-text_dark);
+}
+
+// Services
+.sc_services_timeline .sc_services_item_info,
+.sc_services_default .sc_services_item.sc_services_item_featured_top {
+	@include box-shadow(none !important);
+}
+.sc_services_timeline .extra_row .sc_services_item:hover .sc_services_item_info {
+	@include box-shadow(none !important);
+}
+
+// Social
+.footer_wrap .sc_layouts_row_type_normal .sc_socials.sc_socials_names:not(.alter) .socials_wrap .social_item {
+	font-weight: 700;
+}
+
+// Blogger classic_simple
+.sc_blogger_default.sc_blogger_default_classic_simple .sc_blogger_item_default.sc_blogger_item_on_plate.sc_blogger_item_image_position_top .sc_blogger_item_content {
+	border: none;
+}
+
+// Extended products_default
+.sc_extended_products_default .woocommerce ul.products li.product {
+	padding-bottom: 40px;
+}
+
+// counter
+.elementor-widget-counter .elementor-counter-title {
+	color: var(--theme-color-text_dark);
+}
+
+
+@media #{$media_lg} {
+	body .sc_icons_creative {
+		.sc_icons_item {
+			padding: 0;
+		}
+		.sc_icons_icon + .sc_icons_item_details,
+		.sc_icons_image + .sc_icons_item_details {
+			margin-top: 1.5em;
+		}
+	}
+	body .trx_addons_scroll_to_top {
+		right: 0.5em;
+		&.show {
+			bottom: 0.5em;
+		}
+	}
+}
+
+@media #{$media_md} {
+	body .sc_icons_creative .sc_icons_item_title {
+		font-size: 1.2em;
+	}
+}
+
+@media #{$media_sm} {
+	.sc_layouts_title_breadcrumbs {
+		margin-top: 0.5em;
+	}
+	body .sc_icons_creative {
+		.sc_icons_icon + .sc_icons_item_details,
+		.sc_icons_image + .sc_icons_item_details {
+			margin-top: 1em;
+		}
+	}
+}
+
+@media #{$media_xs} {
+	.sc_layouts_title .breadcrumbs {
+		font-size: 15px;
+	}
+}

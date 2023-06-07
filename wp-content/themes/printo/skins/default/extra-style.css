@@ -1,0 +1,171 @@
+.page_wrap.with_bg {
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.page_wrap.with_bg.contain_size {
+  background-position: top center;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+.page_wrap.with_bg .page_content_wrap {
+  background-color: transparent;
+}
+.page_wrap.with_bg .top_panel,
+.page_wrap.with_bg [class*="scheme_"].top_panel,
+.page_wrap.with_bg [class*="scheme_"].footer_wrap {
+  background-color: transparent;
+}
+
+.extra_bg_layout .custom_bg_layout_area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.extra_bg_layout .page_content_wrap {
+  background-color: transparent;
+}
+.extra_bg_layout .top_panel,
+.extra_bg_layout [class*="scheme_"].top_panel,
+.extra_bg_layout [class*="scheme_"].footer_wrap {
+  background-color: transparent;
+}
+
+@media (max-width: 1679px) {
+  /* Need to avoid horizontal scrollbar and shift page. But with this rule stack sections jump down when any rows become fixed */
+  .body_style_fullscreen:not(.elementor-editor-active) .content_wrap_fullscreen,
+  body:not(.elementor-editor-active) .extra_bg_layout {
+    overflow: hidden;
+    position: relative;
+  }
+}
+@media (min-width: 768px) {
+  .extra_bg_layout .custom_bg_layout_area .elementor-section.elementor-section-height-full {
+    top: var(--fixed-rows-height);
+  }
+}
+.post_item_404 .post_content .all-svg {
+  display: none;
+}
+
+.sc_layouts_title .breadcrumbs {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.sc_layouts_title .breadcrumbs a {
+  color: var(--theme-color-text) !important;
+}
+
+.sc_layouts_title .sc_layouts_title_breadcrumbs {
+  color: var(--theme-color-text);
+}
+
+.sc_layouts_title_breadcrumbs {
+  margin-top: 1em;
+}
+
+.breadcrumbs .breadcrumbs_delimiter {
+  margin: 0 0.6em;
+}
+.breadcrumbs .breadcrumbs_delimiter:before {
+  content: '-';
+}
+
+.sc_layouts_row_type_compact .sc_layouts_cart .sc_layouts_cart_icon:before {
+  content: '\EA1C';
+}
+
+.sc_icons_creative .sc_icons_item_title {
+  font-size: 24px;
+}
+
+.slider_pagination_style_title.sc_slider_controls_light .slider_pagination_wrap .slider_pagination_bullet {
+  font-weight: 600;
+}
+
+.dis_block .elementor-counter .elementor-counter-number-wrapper {
+  display: block;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.search_style_expand.search_wrap .search_submit:before {
+  color: var(--theme-color-text_dark);
+}
+
+.sc_services_timeline .sc_services_item_info,
+.sc_services_default .sc_services_item.sc_services_item_featured_top {
+  -webkit-box-shadow: none !important;
+  -ms-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.sc_services_timeline .extra_row .sc_services_item:hover .sc_services_item_info {
+  -webkit-box-shadow: none !important;
+  -ms-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.footer_wrap .sc_layouts_row_type_normal .sc_socials.sc_socials_names:not(.alter) .socials_wrap .social_item {
+  font-weight: 700;
+}
+
+.sc_blogger_default.sc_blogger_default_classic_simple .sc_blogger_item_default.sc_blogger_item_on_plate.sc_blogger_item_image_position_top .sc_blogger_item_content {
+  border: none;
+}
+
+.sc_extended_products_default .woocommerce ul.products li.product {
+  padding-bottom: 40px;
+}
+
+.elementor-widget-counter .elementor-counter-title {
+  color: var(--theme-color-text_dark);
+}
+
+@media (max-width: 1279px) {
+  body .sc_icons_creative .sc_icons_item {
+    padding: 0;
+  }
+  body .sc_icons_creative .sc_icons_icon + .sc_icons_item_details,
+  body .sc_icons_creative .sc_icons_image + .sc_icons_item_details {
+    margin-top: 1.5em;
+  }
+
+  body .trx_addons_scroll_to_top {
+    right: 0.5em;
+  }
+  body .trx_addons_scroll_to_top.show {
+    bottom: 0.5em;
+  }
+}
+@media (max-width: 1023px) {
+  body .sc_icons_creative .sc_icons_item_title {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 767px) {
+  .sc_layouts_title_breadcrumbs {
+    margin-top: 0.5em;
+  }
+
+  body .sc_icons_creative .sc_icons_icon + .sc_icons_item_details,
+  body .sc_icons_creative .sc_icons_image + .sc_icons_item_details {
+    margin-top: 1em;
+  }
+}
+@media (max-width: 479px) {
+  .sc_layouts_title .breadcrumbs {
+    font-size: 15px;
+  }
+}
+
+/*# sourceMappingURL=extra-style.css.map */
